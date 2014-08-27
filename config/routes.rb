@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'dashboard#index'
+  root to: 'groups#index'
+
+  resources :groups
+  resources :users
 end

@@ -23,9 +23,9 @@ en:
   hello: "Hello world"
 
   titles:
-    application: Rails Base example site
+    application: ITIScore
     dashboard:
-      index: Dashboard
+      index: Main page
     devise:
       registrations:
         new: Sign up
