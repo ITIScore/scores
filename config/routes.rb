@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'administrations#index'
+  root to: 'groups#index'
 
-  resources :administrations
+  resources :groups
   resources :users
 end

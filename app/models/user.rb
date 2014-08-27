@@ -6,12 +6,13 @@ class User < ActiveRecord::Base
 
   serialize :roles, Array
 
-  belongs_to :administration
+  belongs_to :group
+  has_one :group
 
   after_create :create_admin_if_needed
 
   def setup_as_superadmin?
-    administration.blank?
+    group.blank?
   end
 
   def to_s
@@ -29,7 +30,7 @@ class User < ActiveRecord::Base
   end
 
   def create_admin
-    new_admin = Administration.create owner_id: id
-    update_attributes roles: ['superadmin'], administrations_id: new_admin.id
+    new_group = Group.create user_id: id
+    update_attributes roles: ['superadmin'], group_id: new_group.id
   end
 end
