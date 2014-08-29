@@ -1,0 +1,12 @@
+.row
+  .column
+    h3 = link_to 'Add new student', new_student_path
+    h2 ALL STUDENTS:
+    p
+    - students.each do |students|
+      h5
+        = students.lastname + ' '
+        = students.firstname + ' '
+        = students.patronymic + ' '
+        = link_to 'show', student_path(students)
+        = link_to 'delete', student_path(students), method: :delete, data: { confirm: 'Are you sure?' }

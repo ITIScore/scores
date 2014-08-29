@@ -7,6 +7,27 @@ h1, h2 {
   margin: 1rem 0 0.5rem;
 }
 
+h3 {
+  color: white;
+}
+
+.center {
+  margin: auto;
+  width: 250px;
+  padding: 10px;
+}
+
+.side {
+  margin: auto;
+  width: 250px;
+  background: #476C91;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+}
+
 h6 {
   margin-top: 0;
   line-height: 1;
@@ -14,8 +35,10 @@ h6 {
 
 li {
   list-style-position: inside;
+  background: #476C91;
 }
 
 ul.links {
+  background: #476C91;
   font-size: 0.85rem
 }

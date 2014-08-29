@@ -1,8 +1,16 @@
-.row
-  .columns
-  p
-  | Edit administration
-  = form_for group do |f|
-    = f.label :number
-    = f.text_field :number
-    = f.submit
+.side
+  .row
+    .columns
+      .center
+        h3 Edit administration
+  .row
+    .medium-6.columns
+      .center
+        = form_for group do |f|
+
+          .form-inputs
+            = f.label :number
+            = f.text_field :number
+
+          .form-actions
+          = f.submit

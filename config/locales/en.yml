@@ -83,6 +83,10 @@ en:
     navigation:
       main:
         dashboard: 'Dashboard'
+      group:
+        group: 'Group'
+      students:
+        students: 'Students'
       user:
         sign_in: 'Sign in'
         sign_out: 'Sign out'
