@@ -1,0 +1,10 @@
+.row
+  .column
+    h3 = link_to 'back', students_path
+    h2
+      = student.lastname + ' '
+      = student.firstname + ' '
+      = student.patronymic
+    h3
+      = link_to 'edit', edit_student_path(student)
+

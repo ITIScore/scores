@@ -1,10 +1,9 @@
 .row
   .columns
-    | Administrator INFO:
+    h3 Administrator INFO:
     p
-    | Number:
-    p
-    = group.number
+    h4 Group number:
+    h4 = group.number
     p
     = link_to 'Edit', edit_group_path(group)
 

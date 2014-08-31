@@ -1,0 +1,11 @@
+.row
+  .columns
+    P
+    = form_for student do |f|
+      = f.label :lastname
+      = f.text_field :lastname
+      = f.label :firstname
+      = f.text_field :firstname
+      = f.label :patronymic
+      = f.text_field :patronymic
+      = f.submit
