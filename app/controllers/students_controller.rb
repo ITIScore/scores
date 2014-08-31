@@ -17,7 +17,7 @@ class StudentsController < AuthorizedController
   def update
     student.update(students_params)
     student.save
-    redirect_to student_path(students), notice: 'Student was successfull updated!'
+    redirect_to student_path, notice: 'Student was successfull updated!'
   end
 
   private

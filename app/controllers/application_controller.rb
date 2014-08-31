@@ -1,6 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
+  expose(:group) { current_user.group }
+
   protected
 
   def devise_parameter_sanitizer

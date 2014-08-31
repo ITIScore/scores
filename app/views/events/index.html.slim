@@ -1,0 +1,11 @@
+.row
+  .column
+    h3 = link_to 'Add new event', new_event_path
+    h2 ALL EVENTS:
+    p
+    - events.each do |events|
+      h5
+        = events.name + ' '
+        = events.date.to_s + ' '
+        = link_to 'show', event_path(events)
+        = link_to 'delete', event_path(events), method: :delete, data: { confirm: 'Are you sure?' }
