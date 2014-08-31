@@ -1,0 +1,8 @@
+.row
+  .column
+    h3 = link_to 'back'
+    h2
+      = event.name + ' '
+      = event.date.to_s
+    h3
+      = link_to 'edit', edit_event_path

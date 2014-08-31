@@ -87,6 +87,8 @@ en:
         group: 'Group'
       students:
         students: 'Students'
+      events:
+        events: 'Events'
       user:
         sign_in: 'Sign in'
         sign_out: 'Sign out'
