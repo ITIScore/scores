@@ -5,8 +5,9 @@
     p
     - students.each do |students|
       h5
-        = students.lastname + ' '
-        = students.firstname + ' '
-        = students.patronymic + ' '
-        = link_to 'show', student_path(students)
-        = link_to 'delete', student_path(students), method: :delete, data: { confirm: 'Are you sure?' }
+        - if students.group_id.eql?(current_user.group_id)
+            = students.lastname + ' '
+            = students.firstname + ' '
+            = students.patronymic + ' '
+            = link_to 'show', student_path(students)
+            = link_to 'delete', student_path(students), method: :delete, data: { confirm: 'Are you sure?' }

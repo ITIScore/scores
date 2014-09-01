@@ -1,0 +1,12 @@
+.row
+  .column
+    h2 Students:
+    table
+      - relations.each do |relations|
+        h5
+          - if relations.event_id.eql?(event.id)
+            tr
+              td.student_id = relations.student_id
+              td.score = relations.score
+              td.link = link_to 'edit', edit_event_relation_path(event, relations)
+              td.link = link_to 'delete', event_relation_path(event, relations), method: :delete, data: { confirm: 'Are you sure?' }

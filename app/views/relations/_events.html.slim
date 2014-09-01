@@ -1,0 +1,10 @@
+.row
+  .column
+    h2 Events:
+    table
+      - relations.each do |relations|
+        h5
+          - if relations.student_id.eql?(student.id)
+            tr
+              td.event_id = relations.event_id
+              td.score = relations.score
