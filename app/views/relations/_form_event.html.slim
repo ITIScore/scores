@@ -1,0 +1,23 @@
+.row
+  .columns
+    P
+    = form_for [event, relation], :html => { :multipart => true } do |f|
+      = f.label :student
+      = collection_select(:relation,
+        :student_id,
+        students,
+        :id,
+        :lastname,
+        prompt: true,
+        selected: relation.student_id ? relation.student_id : '')
+      = f.label :event
+      = collection_select(:relation,
+        :event_id,
+        events,
+        :id,
+        :name,
+        prompt: true,
+        selected: event.id)
+      = f.label :score
+      = f.select(:score, [1,2,3,4,5])
+      = f.submit 'Add'

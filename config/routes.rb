@@ -4,6 +4,10 @@ Rails.application.routes.draw do
 
   resources :groups
   resources :users
-  resources :students
-  resources :events
+  resources :students do
+    resources :relations
+  end
+  resources :events do
+    resources :relations
+  end
 end

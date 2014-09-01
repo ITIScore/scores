@@ -2,6 +2,8 @@ class EventsController < ApplicationController
 
   expose(:event)
   expose(:events)
+  expose(:relation)
+  expose(:relations)
 
   def create
     event = events.new(event_params)
