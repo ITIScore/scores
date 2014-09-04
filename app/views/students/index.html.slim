@@ -1,13 +1,28 @@
+center
+  .row
+    h3 All students:
 .row
-  .column
-    h3 = link_to 'Add new student', new_student_path
-    h2 ALL STUDENTS:
-    p
-    - students.each do |students|
-      h5
-        - if students.group_id.eql?(current_user.group_id)
-            = students.lastname + ' '
-            = students.firstname + ' '
-            = students.patronymic + ' '
-            = link_to 'show', student_path(students)
-            = link_to 'delete', student_path(students), method: :delete, data: { confirm: 'Are you sure?' }
+  .center
+    .columns
+      br
+        btn
+          = link_to 'Add new student', new_student_path
+      p
+      table
+        tr
+          td.fio
+            center
+              h5 Student
+          td.link_to
+            btn
+              = link_to 'Add', new_student_path
+        - students.each do |students|
+          - if students.group_id.eql?(current_user.group_id)
+            tr
+              td.fio
+                h5
+                  = students.lastname + ' '
+                  = students.firstname + ' '
+                  = students.patronymic + ' '
+              td.link_to = link_to 'show', student_path(students)
+              td.link_to = link_to 'delete', student_path(students), method: :delete, data: { confirm: 'Are you sure?' }

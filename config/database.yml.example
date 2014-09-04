@@ -4,7 +4,7 @@ defaults_development: &defaults_development
   adapter: postgresql
   encoding: unicode
   username: postgres
-  password: 1994m
+  password: postgres
   host: localhost
 
 development:

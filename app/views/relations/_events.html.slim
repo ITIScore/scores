@@ -2,6 +2,13 @@
   .column
     h2 Events:
     table
+      tr
+        td.event_id
+          center
+            h5 Event
+        td.score
+          center
+            h5 Score
       - relations.each do |relations|
         h5
           - if relations.student_id.eql?(student.id)

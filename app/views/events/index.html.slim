@@ -1,11 +1,24 @@
+center
+  .row
+    h3 All events:
 .row
-  .column
-    h3 = link_to 'Add new event', new_event_path
-    h2 ALL EVENTS:
-    p
-    - events.each do |events|
-      h5
-        = events.name + ' '
-        = events.date.to_s + ' '
-        = link_to 'show', event_path(events)
-        = link_to 'delete', event_path(events), method: :delete, data: { confirm: 'Are you sure?' }
+  .center
+    .column
+      br = link_to 'Add new event', new_event_path
+      br
+      table
+        tr
+          td.name
+            center
+              h5 Name
+          td.date
+            center
+              h5 Date
+        - events.each do |events|
+          tr
+            td.name
+              h5 = events.name + ' '
+            td.date
+              h5 = events.date.to_s + ' '
+            td.link_to = link_to 'show', event_path(events)
+            td.link_to = link_to 'delete', event_path(events), method: :delete, data: { confirm: 'Are you sure?' }

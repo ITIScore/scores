@@ -1,12 +1,14 @@
-.row
-  .column
-    h3 = link_to 'back', students_path
-    h2
+center
+  .row
+    h3
       = student.lastname + ' '
       = student.firstname + ' '
       = student.patronymic
-    h3
-      = link_to 'edit', edit_student_path
-    h2
-      = render 'relations/events'
+.row
+  .center
+    .columns
+      p = link_to 'back', students_path
+      p = link_to 'edit', edit_student_path
+      h2
+        = render 'relations/events'
 
