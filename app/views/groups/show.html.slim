@@ -1,9 +1,12 @@
+center
+  .row
+    h3 Group Info:
 .row
-  .columns
-    h3 Administrator INFO:
-    p
-    h4 Group number:
-    h4 = group.number
-    p
-    = link_to 'Edit', edit_group_path(group)
+  .center
+    .columns
+      br = link_to 'Edit', edit_group_path(group)
+      p
+      h4 Group number:
+      h4 = group.number
+
 

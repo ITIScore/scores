@@ -5,7 +5,7 @@ class RelationsController < ApplicationController
   expose(:event)
   expose(:events)
   expose(:student)
-  expose(:students)
+  expose(:students) { group.students }
 
   def create
     relation = relations.new(relation_params)
@@ -31,6 +31,6 @@ class RelationsController < ApplicationController
       :student_id,
       :event_id,
       :score
-    )
+    ).merge(group_id: current_user.group_id)
   end
 end

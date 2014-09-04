@@ -8,13 +8,19 @@ h1, h2 {
 }
 
 h3 {
-  color: white;
+  border-bottom: 4px solid;
+  border-top: 3px solid;
+  border-color: #F5F5FF;
+  color: #476C91;
+}
+
+.row {
+  background-color: white;
 }
 
 .center {
   margin: auto;
-  width: 250px;
-  padding: 10px;
+  width: 470px;
 }
 
 .side {
@@ -41,4 +47,8 @@ li {
 ul.links {
   background: #476C91;
   font-size: 0.85rem
+}
+
+body {
+  background-color: #F5F5FF;
 }
