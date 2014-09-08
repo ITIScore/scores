@@ -1,8 +1,9 @@
 center
-  .row
-    h3 Add new event for student:
+  h3 Add new event for student:
+  btn-panel
+    = link_to 'back', event_path(event)
+br
 .row
   .center
     .columns
-      p = link_to 'back', event_path(event)
-      = render 'form_event'
+      br = render 'form_event'

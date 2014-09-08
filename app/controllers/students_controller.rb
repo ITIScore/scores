@@ -5,7 +5,9 @@ class StudentsController < AuthorizedController
   expose(:relation)
   expose(:relations) { student.relations }
   expose(:event)
-  expose(:events)
+  expose(:events) { user.events }
+  expose(:user) { users.owner? }
+  expose(:users)
 
   def create
     student = students.new(students_params)

@@ -1,10 +1,11 @@
 center
-  .row
-    h3 All events:
+  h3 All events:
+  btn-panel
+    = link_to 'add new event', new_event_path
+br
 .row
-  .center
+  center
     .column
-      br = link_to 'Add new event', new_event_path
       br
       table
         tr

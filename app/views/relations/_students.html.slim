@@ -1,21 +1,22 @@
-.row
-  .column
-    h2 Students:
-    table
-      tr
-        td.student_id
-          center
-            h5 Student
-        td.score
-          center
-            h5 Score
-      - relations.each do |relations|
-        - if relations.group_id.eql?(current_user.group_id)
-          - if relations.event_id.eql?(event.id)
-            tr
-              td.student_id
-                h5 = relations.student_id
-              td.score
-                h5 = relations.score
-              td.link = link_to 'edit', edit_event_relation_path(event, relations)
-              td.link = link_to 'delete', event_relation_path(event, relations), method: :delete, data: { confirm: 'Are you sure?' }
+.column
+  h2 Students:
+  table
+    tr
+      td.student_id
+        center
+          h5 Student
+      td.score
+        center
+          h5 Score
+    - relations.each do |relations|
+      - if relations.group_id.eql?(current_user.group_id)
+        - if relations.event_id.eql?(event.id)
+          - students.each do |students|
+            -if relations.student_id.eql?(students.id)
+              tr
+                td.student_name
+                  h5 = students.lastname
+                td.student_score
+                  h5 = relations.score
+                td.link = link_to 'edit', edit_event_relation_path(event, relations)
+                td.link = link_to 'delete', event_relation_path(event, relations), method: :delete, data: { confirm: 'Are you sure?' }

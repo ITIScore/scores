@@ -3,7 +3,11 @@ class EventsController < ApplicationController
   expose(:event)
   expose(:events)
   expose(:relation)
-  expose(:relations)
+  expose(:relations) { group.relations }
+  expose(:students) { group.students }
+  expose(:student)
+
+  before_action :check_events_creator?, only: %i(updated destroy new)
 
   def create
     event = events.new(event_params)
@@ -24,11 +28,15 @@ class EventsController < ApplicationController
 
   private
 
+  def check_events_creator?
+    current_user.create_events.empty?
+  end
+
   def event_params
     params.require(:event).permit(
       :name,
       :date
-    )
+    ).merge(user_id: current_user.id)
   end
 
 end

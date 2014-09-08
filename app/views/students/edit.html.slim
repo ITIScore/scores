@@ -1,8 +1,9 @@
 center
-  .row
-    h3 Update student:
+  h3 Update student:
+  btn-panel
+    = link_to 'back', student_path
+br
 .row
   .center
     .columns
-      p = link_to 'back', student_path
-      = render 'form'
+      br = render 'form'
