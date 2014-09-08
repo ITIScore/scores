@@ -1,8 +1,9 @@
 center
-  .row
-    h3 Update event:
+  h3 Update event:
+  btn-panel
+    = link_to 'back', event_path
+br
 .row
   .center
     .column
-      br = link_to 'back', event_path
-      = render 'form'
+      br = render 'form'

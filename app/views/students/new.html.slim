@@ -1,8 +1,9 @@
 center
-  .row
-    h3 Add new student:
+  h3 Add new student:
+  btn-panel
+    = link_to 'back', students_path
+br
 .row
   .center
     .columns
-      br = link_to 'back', students_path
-      = render 'form'
+      br = render 'form'

@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
 
   belongs_to :group
   has_one :group
+  has_many :events
 
   after_create :create_admin_if_needed
 
@@ -21,6 +22,10 @@ class User < ActiveRecord::Base
 
   def full_name_with_email
     "#{self[:full_name]} (#{email})"
+  end
+
+  def owner?(user)
+    user.create_events.empty?
   end
 
   private

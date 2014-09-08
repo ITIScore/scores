@@ -3,6 +3,7 @@ class Group < ActiveRecord::Base
 
   has_one :users
   has_many :students
+  has_many :relations
 
   def owner?(user)
     owner == user_id

@@ -8,14 +8,29 @@ h1, h2 {
 }
 
 h3 {
-  border-bottom: 4px solid;
-  border-top: 3px solid;
-  border-color: #F5F5FF;
+  border-bottom: 3px solid;
+  border-left: 3px solid;
+  border-right: 3px solid;
+  border-color: #476C91;
+  border-width: 1px;
+
   color: #476C91;
+  background: white;
+
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+
+  max-width: 50.5rem;
+  margin-top: 0px;
 }
 
 .row {
   background-color: white;
+  border: 3px solid;
+  border-width: 1px;
+  border-color: #476C91;
+  padding-border-top: 10px;
+  max-width: 50.5rem;
 }
 
 .center {
@@ -51,4 +66,23 @@ ul.links {
 
 body {
   background-color: #F5F5FF;
+}
+
+btn-panel {
+  a {
+    user-select: none;
+    padding: .5em 1.8em;
+    padding-top: 8px;
+    padding-bottom: 9px;
+    border-color: #F5F5FF;
+    background: #476C91;
+    color: white;
+  }
+  a:hover {
+    background: #008cba;
+    color: white;
+  }
+  a:active {
+    background: #778899;
+  }
 }

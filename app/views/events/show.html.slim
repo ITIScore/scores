@@ -1,12 +1,15 @@
 center
-  .row
-    h3
-      = event.name + ' '
-      = event.date.to_s
+  h3
+    = event.name + ' '
+    = event.date.to_s
+  btn-panel
+    = link_to 'back', events_path
+  btn-panel
+    = link_to 'add new student', new_event_relation_path(event)
+  btn-panel
+    = link_to 'edit', edit_event_path
+br
 .row
-  .center
+  center
     .column
-      br = link_to 'back', events_path
-      br= link_to 'edit', edit_event_path
-      br = link_to 'add new student', new_event_relation_path(event)
-      = render 'relations/students'
+      br = render 'relations/students'
