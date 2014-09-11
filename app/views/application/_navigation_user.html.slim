@@ -1,6 +1,16 @@
 ul.right
   - if user_signed_in?
     li.has-dropdown
+      a.user-dropdown href="#" Group
+      ul.dropdown
+        new_user_registration_path
+        li
+          a href=group_path(group)
+            = t('app.navigation.group.info')
+        li
+          a href=edit_group_path(group)
+            = t('app.navigation.group.edit')
+    li.has-dropdown
       a.user-dropdown href="#" = current_user.full_name_with_email
       ul.dropdown
         new_user_registration_path

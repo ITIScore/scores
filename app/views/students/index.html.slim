@@ -1,7 +1,8 @@
 center
-  h3 All students:
-  btn-panel
-    = link_to 'add new student', new_student_path
+  .row
+    tittle  All students:
+    btn-tool
+      = link_to 'add new student', new_student_path
 br
 .row
   center
@@ -9,9 +10,6 @@ br
       p
       table
         tr
-          td.fio
-            center
-              h5 Student
         - students.each do |students|
           - if students.group_id.eql?(current_user.group_id)
             tr

@@ -84,11 +84,15 @@ en:
       main:
         dashboard: 'Dashboard'
       group:
-        group: 'Group'
+        info: 'Group'
+        edit: 'Edit'
       students:
-        students: 'Students'
+        all: 'All students'
+        new: 'New student'
+        find: 'Find student'
       events:
-        events: 'Events'
+        all: 'All events'
+        new: 'New event'
       user:
         sign_in: 'Sign in'
         sign_out: 'Sign out'

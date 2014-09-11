@@ -1,13 +1,14 @@
+btn-back
+  = link_to '<', events_path
+btn-tool-edit
+  = link_to 'edit', edit_event_path
 center
-  h3
-    = event.name + ' '
-    = event.date.to_s
-  btn-panel
-    = link_to 'back', events_path
-  btn-panel
-    = link_to 'add new student', new_event_relation_path(event)
-  btn-panel
-    = link_to 'edit', edit_event_path
+  .row
+    tittle
+      = event.name + ' '
+      = event.date.to_s
+    btn-tool-event
+      = link_to 'add new student', new_event_relation_path(event)
 br
 .row
   center
