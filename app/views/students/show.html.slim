@@ -1,16 +1,18 @@
+btn-back
+  = link_to '<', students_path
+btn-tool-edit
+  = link_to 'edit', edit_student_path
 center
-  h3
-    = student.lastname + ' '
-    = student.firstname + ' '
-    = student.patronymic
-  btn-panel
-    = link_to 'back', students_path
-  btn-panel
-    = link_to 'edit', edit_student_path
+  .row
+    tittle
+      = student.lastname + ' '
+      = student.firstname + ' '
+      = student.patronymic
 br
 .row
   .center
     .columns
       h2
         / = render 'relations/events'
+
 

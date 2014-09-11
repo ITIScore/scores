@@ -1,5 +1,26 @@
 ul.left
   - if user_signed_in?
-    = active_link_to t('app.navigation.main.students'), students_path, active: :exclusive, wrap_tag: :li
-    = active_link_to t('app.navigation.group.group'), group_path(group), active: :exclusive, wrap_tag: :li
-    = active_link_to t('app.navigation.events.events'), events_path, active: :exclusive, wrap_tag: :li
+    li.has-dropdown
+      a.user-dropdown href="#" Students
+      ul.dropdown
+        new_user_registration_path
+        li
+          a href=students_path
+            = t('app.navigation.students.all')
+        li
+          a href="#"
+            = t('app.navigation.students.find')
+        li
+          a href=new_student_path
+            = t('app.navigation.students.new')
+    li.has-dropdown
+      a.user-dropdown href="#" Events
+      ul.dropdown
+        new_user_registration_path
+        li
+          a href=events_path
+            = t('app.navigation.events.all')
+        li
+          a href=new_event_path
+            = t('app.navigation.events.new')
+

@@ -5,8 +5,10 @@
 }
 
 .top-bar {
-  background: #476C91;
+  box-shadow: inset 0 0 5px 0.5px rgba(0,0,0,0.7);
+  margin-top: 15px;
   .dropdown {
+    background: #476C91;
     // overrides foundation's styling for 'back' link in mobile version of topbar
     li.title {
       &.back {
